@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {SuiModule} from 'ng2-semantic-ui';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -22,7 +23,8 @@ import { BlogModule } from './blog/blog.module';
     DashboardModule,
     TransactionsModule,
     AdminModule,
-    BlogModule
+    BlogModule,
+    SuiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

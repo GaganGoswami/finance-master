@@ -1,11 +1,40 @@
 <div class="ui inverted menu">
-  <div class="item">
-    <img>
+
+
+  <div class="ui item relaxed">
+    <img class= "ui mini circular image" src="assets/logo.PNG">
+      <div class="content">
+      <div class="ui sub header inverted">Finance Management</div>
+      Gagan & Mohini
+    </div>
   </div>
-<a  class="item active" href="" [routerLink]="['/dashboard']" >Dashboard</a>
-<a class="item" href="" [routerLink]="['/transactions']">Transactions</a>
-<a class="item" href="" [routerLink]="['/blog']">Blogs</a>
-<a class="item" href="" [routerLink]="['/admin/login']">Admin</a>
+<a class="item active" href="" [routerLink]="['/dashboard']" ><i class="dashboard green icon"></i>Dashboard</a>
+<a class="item" href="" [routerLink]="['/transactions']"><i class="visa yellow icon"></i>Transactions</a>
+<a class="item" href="" [routerLink]="['/budgets']"><i class="theme purple icon"></i>Budgets</a>
+<a class="item" href="" [routerLink]="['/trends']"><i class="bar chart teal icon"></i>Trends</a>
+<a class="item" href="" [routerLink]="['/investments']"><i class="line chart orange icon"></i>Investments</a>
+<a class="item" href="" [routerLink]="['/blog']"><i class="list layout olive icon"></i>Blogs</a>
+<a class="item right floated" href="" [routerLink]="['/admin/login']"><i class="setting red icon"></i> Admin</a>
 </div>
-<router-outlet></router-outlet>
+    <sui-sidebar-container class="ui bottom attached segment">
+        <sui-sidebar class="inverted vertical" #sidebar>
+            <a class="item" (click)="sidebar.open()">Accounts</a>
+            <a class="item" (click)="sidebar.open()">Transactions</a>
+            <a class="item" (click)="sidebar.open()">Category</a>
+            <a class="item" (click)="sidebar.open()">Bills</a>
+        </sui-sidebar>
+        <sui-sidebar-sibling [isDimmedWhenVisible]="true">
+            <div class="ui basic segment">
+
+                <span>
+                  <i class="sidebar blue icon" (click)="sidebar.open()"> </i>
+                </span>
+                <router-outlet></router-outlet>
+            </div>
+        </sui-sidebar-sibling>
+    </sui-sidebar-container>
+
+
+
+
 

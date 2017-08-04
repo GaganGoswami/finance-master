@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'admin', loadChildren: './admin/admin.module#AdminModule' },
   { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
   { path: 'home', component: HomeComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'home' }
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard' }
 ];
 
 @NgModule({
